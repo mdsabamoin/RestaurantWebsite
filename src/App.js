@@ -1,14 +1,16 @@
 import React,{Fragment} from "react";
 // import logo from './logo.svg';
-import './App.css';
+import classes from './App.css';
 import Header from "./components/Layout/Header";
-import MealsSummary from "./components/Meals/MealsSummary";
+import Meals from "./components/Meals/meals.js";
 function App() {
-  return (<Fragment>
+  return (<Fragment className={classes.App}>
     <Header/>
-    <MealsSummary/>
+    <main>
+    <Meals/>
+    </main>
+    
   </Fragment>
-   
   );
 }
 
