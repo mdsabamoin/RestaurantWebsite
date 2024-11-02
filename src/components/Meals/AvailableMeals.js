@@ -31,8 +31,8 @@ const DUMMY_MEALS = [
 
   const AvailableMeals = ()=>{
 
-    const availableItems = DUMMY_MEALS.map((item)=>{
-        return <MealItem name={item.name} description={item.description} price={item.price}/>});
+    const availableItems = DUMMY_MEALS.map((item,index)=>{
+        return <MealItem key={index} name={item.name} description={item.description} price={item.price}/>});
     return(<section className={classes.meals}>
             <Card>
             <ul>
