@@ -13,7 +13,18 @@ const CartProvider = (props)=>{
     })
    }
  };
-const removeItemFromCartHandler = (id) =>{};
+//  console.log(itemArr);
+const removeItemFromCartHandler = (id) =>{
+  console.log(id);
+  const arr =[...itemArr];
+  for(let i=0;i<arr.length;i++){
+    if(arr[i].props.id === id){
+      arr.splice(i,1);
+      setItemArr(arr);
+    }
+  }
+   
+};
 
 
   const cartContext = {
