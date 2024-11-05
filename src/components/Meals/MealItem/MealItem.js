@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./MealItem.css";
 import MealItemForm from "../MealItemForm";
 const MealItem = (props) =>{
-
+    // console.log(props);
     const price = `$${props.price}`
     return(<li className={classes.meal}>
         <div>
@@ -11,7 +11,7 @@ const MealItem = (props) =>{
             <div className={classes.price}>{price}</div>
         </div>
         <div>
-         <MealItemForm/>    
+         <MealItemForm props={props}/>    
         </div>     
     </li>)
 }
